@@ -1,0 +1,11 @@
+ print "enter email\n";
+$email = <STDIN>;
+chomp($email);
+@username = split('@',$email);
+if($username[1] =~/gmail.com/) {
+print "valid email\n";
+}
+else
+{
+print "invalid email\n";
+}

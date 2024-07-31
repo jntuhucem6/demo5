@@ -1,0 +1,20 @@
+set x {red blue yellow}
+set y [list red blue yellow]
+set z [split "red_blue_yellow"]
+puts $x
+puts $y
+puts $z
+
+set x {orange}
+append x " " "king"
+puts $x
+
+
+
+
+foreach item {1 2 3 4 5 6 7 8 9} {
+puts $item
+}
+
+set x [concat {1,2,3} {a,b,c}]
+puts $x
