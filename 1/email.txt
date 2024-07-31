@@ -9,3 +9,273 @@ else
 {
 print "invalid email\n";
 }
+
+
+
+
+
+1. copy
+
+def multiple_string(str, n)
+ return str*n
+end
+print multiple_string('a', 1),"\n"
+print multiple_string('a', 2),"\n"
+print multiple_string('a', 3),"\n"
+print multiple_string('a', 4),"\n"
+print multiple_string('a', 5),"\n"
+Output:
+a
+aa
+aaa
+aaaa
+aaaaa
+
+2.circle program
+Ruby Code:
+radius = 5.0
+perimeter = 0.0
+area = 0.0
+print "Input the radius of the circle: "
+radius = gets.to_f
+perimeter = 2 * 3.141592653 * radius
+area = 3.141592653 * radius * radius
+puts "The perimeter is #{perimeter}."
+puts "The area is #{area}."
+Output:
+Input the radius of the circle: The perimeter is 31.41592653.
+The area is 78.539816325.
+
+3.reverse order
+
+puts "Input your first name: "
+fname = gets.chomp
+puts "Input your last name: "
+lname = gets.chomp
+puts "Hello #{lname} #{fname}"
+Output:
+Input your first name: 
+Input your last name: 
+Hello Lanoie Gary
+
+4.filename
+file = "/user/system/test.rb"
+# file name
+fbname = File.basename file 
+puts "File name: "+fbname 
+# basename
+bname = File.basename file,".rb"
+puts "Base name: "+bname 
+# file extention
+ffextn = File.extname file 
+puts "Extention: "+ffextn 
+# path name
+path_name= File.dirname file 
+puts "Path name: "+path_name
+Output:
+File name: test.rb
+Base name: test
+Extention: .rb
+Path name: /user/system
+
+
+5.greatest three numbers
+
+Ruby Code:
+x,y,z = 2,5,4
+if x >= y and x >= z
+ puts "x = #{x} is greatest."
+elsif y >= z and y >= x 
+ puts "y = #{y} is greatest."
+else 
+ puts "z = #{z} is greatest."
+end
+Copy
+Output:
+y = 5 is greatest.
+
+
+6.print odd numbers 10 to 1
+
+puts "Odd numbers between 9 to 1: "
+9.step 1, -2 do |x|
+ puts "#{x}"
+ end
+Output:
+Odd numbers between 9 to 1: 
+9
+7
+5
+3
+1
+
+
+7.true sum
+
+
+def makes20(x,y)
+ return x == 20 || y == 20 || x + y == 20
+end
+print makes20(20, 10),"\n" 
+print makes20(40, 10),"\n" 
+print makes20(15, 20)
+Copy
+Output:
+true
+false
+true
+
+
+8.temperature
+
+def temp(temp1, temp2)
+ return ( temp1 < 0 && temp2 > 100 ) || ( temp1 > 100 && temp2 < 0 );
+end
+print temp(110, -1),"\n"
+print temp(-1, 110),"\n"
+print temp(2, 120)
+Output:
+true
+true
+false
+
+9.simple array
+
+
+Sample array : ["Ruby", 2.3, Time.now]
+Ruby Code:
+array1 = ["Ruby", 2.3, Time.now]
+for array_element in array1
+ puts array_element
+end
+Copy
+Output:
+Ruby
+2.3
+2017-12-28 06:01:53 +0000
+
+
+10. student marks
+
+
+student_marks = Hash.new 0
+
+student_marks['Literature'] = 74
+
+student_marks['Science'] = 89
+
+student_marks['Math'] = 91
+
+total_marks = 0
+
+student_marks.each {|key,value|
+
+ total_marks +=value
+
+ } 
+
+puts "Total Marks: "+total_marks.to_s
+
+Copy
+
+Output:
+
+Total Marks: 254
+
+
+ 15. modify 
+
+
+proc newer { fp fp2 } {
+
+if ![file exists $fp] {
+
+ puts "file exsist"
+
+} else {
+
+ # Assume file1 exists
+
+ expr [file mtime $fp] > [file mtime $fp2]
+
+ puts "file modification times compared."
+
+}
+
+}
+
+newer file1.txt file2.txt
+
+17.(a) largest perl
+
+#!/usr/bin/perl
+print "enter a value";
+$a=<stdin>;
+print "enter b value";
+$b=<stdin>;
+print "enter c value";
+$c=<stdin>;
+if($a > $b) //if compares string use gt ,lt,le,ge
+{
+ if($a> $c)
+ {
+ print " $a is largest number\n";
+ }
+ else
+ {
+ print " $c is largest number\n";
+ }
+}
+elsif($b >$c)
+{
+ print " $b is largest number";
+}
+else
+{
+ print " $c is largest nnumber";
+}
+OUT PUT:
+Perl great.pl
+Enter a value 4
+Enter b value 6
+Enter c value 5
+6 is largest number
+
+
+19.(b) ip address perl
+
+print("Enter the IP Address you would like to validate - ");
+my $ip = <STDIN>;
+if($ip =~ /(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})/)
+{
+$ip = $1;
+}
+chomp($ip);
+if($ip =~ m/^(\d\d?\d?)\.(\d\d?\d?)\.(\d\d?\d?)\.(\d\d?\d?)$/)
+{
+print("\nIP address found - $ip\n");
+if($1 <= 255 && $2 <= 255 && $3 <= 255 && $4 <= 255)
+{
+print("Each octet of an IP address is ",
+"within the range - $1.$2.$3.$4\n");
+print("\n-> $ip IP address accepted!\n");
+}
+else
+{
+print("Octet(s) out of range. ",
+"Valid number range between 0-255\n");
+}
+}
+else
+{
+print("IP Address $ip is not in a valid format\n");
+}
+
+
+
+
+
+20.
+
+$string =" Hello";
+print scalar reverse("$string"),  "\n";
